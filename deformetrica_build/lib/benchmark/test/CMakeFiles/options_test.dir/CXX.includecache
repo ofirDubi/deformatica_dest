@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ofir123dubi/deformetrica/lib/benchmark/include/benchmark/benchmark_api.h
+assert.h
+-
+stddef.h
+-
+stdint.h
+-
+string
+-
+vector
+-
+map
+-
+macros.h
+/home/ofir123dubi/deformetrica/lib/benchmark/include/benchmark/macros.h
+type_traits
+-
+initializer_list
+-
+utility
+-
+intrin.h
+-
+
+/home/ofir123dubi/deformetrica/lib/benchmark/include/benchmark/macros.h
+
+/home/ofir123dubi/deformetrica/lib/benchmark/test/options_test.cc
+benchmark/benchmark_api.h
+/home/ofir123dubi/deformetrica/lib/benchmark/test/benchmark/benchmark_api.h
+chrono
+-
+thread
+-
+cassert
+-
+

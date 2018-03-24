@@ -1,0 +1,2570 @@
+Start testing: Mar 21 09:34 PDT
+----------------------------------------------------------
+1/34 Testing: run-unit-test
+1/34 Test: run-unit-test
+Command: "/home/ofir123dubi/deformetrica_build/tests/RunUnitTests"
+Directory: /home/ofir123dubi/deformetrica_build/tests
+"run-unit-test" start time: Mar 21 09:34 PDT
+Output:
+----------------------------------------------------------
+[==========] Running 23 tests from 7 test cases.
+[----------] Global test environment set-up.
+[----------] 5 tests from TestKernelPrecisionP3M
+[ RUN      ] TestKernelPrecisionP3M.p3m_vs_exact_Convolve_3
+New grid size: [128, 128, 128] with spacing = [0.188, 0.188, 0.188]
+[       OK ] TestKernelPrecisionP3M.p3m_vs_exact_Convolve_3 (7075 ms)
+[ RUN      ] TestKernelPrecisionP3M.p3m_vs_exact_Convolve_6
+[       OK ] TestKernelPrecisionP3M.p3m_vs_exact_Convolve_6 (4380 ms)
+[ RUN      ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveGradient_3
+[       OK ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveGradient_3 (4381 ms)
+[ RUN      ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveGradient1_3
+[       OK ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveGradient1_3 (4468 ms)
+[ RUN      ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveSpecialHessian_3
+[       OK ] TestKernelPrecisionP3M.p3m_vs_exact_ConvolveSpecialHessian_3 (33474 ms)
+[----------] 5 tests from TestKernelPrecisionP3M (53795 ms total)
+
+[----------] 4 tests from TestBoostWrappers
+[ RUN      ] TestBoostWrappers.TestLinearVariable
+[       OK ] TestBoostWrappers.TestLinearVariable (1 ms)
+[ RUN      ] TestBoostWrappers.TestLinearVariables
+[       OK ] TestBoostWrappers.TestLinearVariables (0 ms)
+[ RUN      ] TestBoostWrappers.TestLinearVariableMap
+[       OK ] TestBoostWrappers.TestLinearVariableMap (1 ms)
+[ RUN      ] TestBoostWrappers.TestLinearVariablesMap
+[       OK ] TestBoostWrappers.TestLinearVariablesMap (0 ms)
+[----------] 4 tests from TestBoostWrappers (2 ms total)
+
+[----------] 2 tests from TestSerialization
+[ RUN      ] TestSerialization.StoreAndLoad
+[       OK ] TestSerialization.StoreAndLoad (21 ms)
+[ RUN      ] TestSerialization.SingletonUse
+[       OK ] TestSerialization.SingletonUse (0 ms)
+[----------] 2 tests from TestSerialization (21 ms total)
+
+[----------] 1 test from TestVolumeGradient
+[ RUN      ] TestVolumeGradient.CHECK_GRADIENT_VOLUME_MESH
+[       OK ] TestVolumeGradient.CHECK_GRADIENT_VOLUME_MESH (954 ms)
+[----------] 1 test from TestVolumeGradient (954 ms total)
+
+[----------] 1 test from TestParallelTransport
+[ RUN      ] TestParallelTransport.CHECK_PARALLEL_TRANSPORT
+Initializing voxels-to-control-points correspondence.
+[       OK ] TestParallelTransport.CHECK_PARALLEL_TRANSPORT (545 ms)
+[----------] 1 test from TestParallelTransport (545 ms total)
+
+[----------] 2 tests from TestReadParametersXML
+[ RUN      ] TestReadParametersXML.SparseDiffeoParameters
+[       OK ] TestReadParametersXML.SparseDiffeoParameters (11 ms)
+[ RUN      ] TestReadParametersXML.DeformableObjectParameters
+[       OK ] TestReadParametersXML.DeformableObjectParameters (9 ms)
+[----------] 2 tests from TestReadParametersXML (20 ms total)
+
+[----------] 8 tests from TestReadConfiguration
+[ RUN      ] TestReadConfiguration.regression_multiple_objects_and_subjects
+[       OK ] TestReadConfiguration.regression_multiple_objects_and_subjects (15 ms)
+[ RUN      ] TestReadConfiguration.sparse_atlas
+[       OK ] TestReadConfiguration.sparse_atlas (19 ms)
+[ RUN      ] TestReadConfiguration.data_set
+[       OK ] TestReadConfiguration.data_set (0 ms)
+[ RUN      ] TestReadConfiguration.load_template
+[       OK ] TestReadConfiguration.load_template (1 ms)
+[ RUN      ] TestReadConfiguration.dictionary
+[       OK ] TestReadConfiguration.dictionary (0 ms)
+[ RUN      ] TestReadConfiguration.compare_oldatlas_cfiguratio
+[       OK ] TestReadConfiguration.compare_oldatlas_cfiguratio (1 ms)
+[ RUN      ] TestReadConfiguration.atlas_3d
+[       OK ] TestReadConfiguration.atlas_3d (23 ms)
+[ RUN      ] TestReadConfiguration.xml_model
+[       OK ] TestReadConfiguration.xml_model (11 ms)
+[----------] 8 tests from TestReadConfiguration (70 ms total)
+
+[----------] Global test environment tear-down
+[==========] 23 tests from 7 test cases ran. (55408 ms total)
+[  PASSED  ] 23 tests.
+<end of output>
+Test time =  59.92 sec
+----------------------------------------------------------
+Test Passed.
+"run-unit-test" end time: Mar 21 09:35 PDT
+"run-unit-test" time elapsed: 00:00:59
+----------------------------------------------------------
+
+2/34 Testing: benchmark
+2/34 Test: benchmark
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/benchmark_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"benchmark" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:13
+--------------------------------------------------------------------------------
+Benchmark                                         Time           CPU Iterations
+--------------------------------------------------------------------------------
+[0;32mBM_Factorial                             [m[0;33m         4 ns          2 ns [m[0;36m   9534148[m 40320[m
+[m[0;32mBM_Factorial/real_time                   [m[0;33m         4 ns          2 ns [m[0;36m   7837157[m 40320[m
+[m[0;32mBM_CalculatePiRange/1                    [m[0;33m        11 ns          6 ns [m[0;36m   2317212[m 0[m
+[m[0;32mBM_CalculatePiRange/8                    [m[0;33m       102 ns         47 ns [m[0;36m    295498[m 3.28374[m
+[m[0;32mBM_CalculatePiRange/64                   [m[0;33m       866 ns        386 ns [m[0;36m     36432[m 3.15746[m
+[m[0;32mBM_CalculatePiRange/512                  [m[0;33m      6215 ns       3037 ns [m[0;36m      4568[m 3.14355[m
+[m[0;32mBM_CalculatePiRange/4096                 [m[0;33m     59030 ns      24143 ns [m[0;36m       576[m 3.14184[m
+[m[0;32mBM_CalculatePiRange/32768                [m[0;33m    371152 ns     193158 ns [m[0;36m        68[m 3.14162[m
+[m[0;32mBM_CalculatePiRange/262144               [m[0;33m   3052007 ns    1564642 ns [m[0;36m         9[m 3.1416[m
+[m[0;32mBM_CalculatePiRange/1048576              [m[0;33m  11350693 ns    6176138 ns [m[0;36m         2[m 3.14159[m
+[m[0;32mBM_CalculatePi/threads:8                 [m[0;33m       337 ns       1688 ns [m[0;36m      8000[m
+[m[0;32mBM_CalculatePi/threads:1                 [m[0;33m      3928 ns       1921 ns [m[0;36m      7308[m
+[m[0;32mBM_CalculatePi/threads:2                 [m[0;33m      2453 ns       1864 ns [m[0;36m      7264[m
+[m[0;32mBM_CalculatePi/threads:4                 [m[0;33m      2566 ns       1892 ns [m[0;36m      8668[m
+[m[0;32mBM_CalculatePi/threads:8                 [m[0;33m       955 ns       1575 ns [m[0;36m      7256[m
+[m[0;32mBM_CalculatePi/threads:16                [m[0;33m       465 ns       1732 ns [m[0;36m      7072[m
+[m[0;32mBM_CalculatePi/threads:32                [m[0;33m       288 ns       1358 ns [m[0;36m     10176[m
+[m[0;32mBM_CalculatePi/threads:1                 [m[0;33m      2786 ns       1340 ns [m[0;36m     10182[m
+[m[0;32mBM_SetInsert/1024/1                      [m[0;33m     68350 ns      25114 ns [m[0;36m       533[m    155.54kB/s[m   38.8849k items/s[m
+[m[0;32mBM_SetInsert/4096/1                      [m[0;33m    129770 ns      85159 ns [m[0;36m       158[m   45.8698kB/s[m   11.4675k items/s[m
+[m[0;32mBM_SetInsert/8192/1                      [m[0;33m    346022 ns     172279 ns [m[0;36m        72[m    22.674kB/s[m    5.6685k items/s[m
+[m[0;32mBM_SetInsert/1024/8                      [m[0;33m     47637 ns      22577 ns [m[0;36m       643[m   1.35172MB/s[m   346.039k items/s[m
+[m[0;32mBM_SetInsert/4096/8                      [m[0;33m    142225 ns      87795 ns [m[0;36m       148[m   355.941kB/s[m   88.9852k items/s[m
+[m[0;32mBM_SetInsert/8192/8                      [m[0;33m    416882 ns     187599 ns [m[0;36m        83[m   166.579kB/s[m   41.6447k items/s[m
+[m[0;32mBM_SetInsert/1024/10                     [m[0;33m     28759 ns      23699 ns [m[0;36m       616[m   1.60962MB/s[m   412.062k items/s[m
+[m[0;32mBM_SetInsert/4096/10                     [m[0;33m    167975 ns     100962 ns [m[0;36m       133[m   386.903kB/s[m   96.7258k items/s[m
+[m[0;32mBM_SetInsert/8192/10                     [m[0;33m    246465 ns     180192 ns [m[0;36m        61[m   216.783kB/s[m   54.1957k items/s[m
+[m[0;32mBM_Sequential<std::vector<int>,int>/1    [m[0;33m         3 ns          2 ns [m[0;36m   7697095[m   2.12888GB/s[m   544.993M items/s[m
+[m[0;32mBM_Sequential<std::vector<int>,int>/8    [m[0;33m       446 ns        206 ns [m[0;36m     69363[m   148.057MB/s[m   37.0142M items/s[m
+[m[0;32mBM_Sequential<std::vector<int>,int>/64   [m[0;33m       783 ns        421 ns [m[0;36m     33384[m   579.938MB/s[m   144.985M items/s[m
+[m[0;32mBM_Sequential<std::vector<int>,int>/512  [m[0;33m      3299 ns       1529 ns [m[0;36m      9288[m   1.24774GB/s[m   319.421M items/s[m
+[m[0;32mBM_Sequential<std::vector<int>,int>/1024 [m[0;33m      5112 ns       2564 ns [m[0;36m      5669[m   1.48757GB/s[m   380.817M items/s[m
+[m[0;32mBM_Sequential<std::list<int>>/1          [m[0;33m         3 ns          1 ns [m[0;36m   9911862[m   2.54777GB/s[m    652.23M items/s[m
+[m[0;32mBM_Sequential<std::list<int>>/8          [m[0;33m       630 ns        330 ns [m[0;36m     37194[m   92.5277MB/s[m   23.1319M items/s[m
+[m[0;32mBM_Sequential<std::list<int>>/64         [m[0;33m      6924 ns       3062 ns [m[0;36m      4427[m   79.7267MB/s[m   19.9317M items/s[m
+[m[0;32mBM_Sequential<std::list<int>>/512        [m[0;33m     55662 ns      26357 ns [m[0;36m       504[m   74.1025MB/s[m   18.5256M items/s[m
+[m[0;32mBM_Sequential<std::list<int>>/1024       [m[0;33m    110784 ns      49405 ns [m[0;36m       277[m   79.0664MB/s[m   19.7666M items/s[m
+[m[0;32mBM_Sequential<std::vector<int>, int>/512 [m[0;33m      3116 ns       1628 ns [m[0;36m      9350[m   1.17164GB/s[m    299.94M items/s[m
+[m[0;32mBM_StringCompare/1                       [m[0;33m         6 ns          3 ns [m[0;36m   4040482[m
+[m[0;32mBM_StringCompare/8                       [m[0;33m         8 ns          4 ns [m[0;36m   3381584[m
+[m[0;32mBM_StringCompare/64                      [m[0;33m         9 ns          5 ns [m[0;36m   2619116[m
+[m[0;32mBM_StringCompare/512                     [m[0;33m        40 ns         18 ns [m[0;36m    756881[m
+[m[0;32mBM_StringCompare/4096                    [m[0;33m       298 ns        151 ns [m[0;36m    144714[m
+[m[0;32mBM_StringCompare/32768                   [m[0;33m      2521 ns       1095 ns [m[0;36m     10000[m
+[m[0;32mBM_StringCompare/262144                  [m[0;33m     35903 ns      16290 ns [m[0;36m      1369[m
+[m[0;32mBM_StringCompare/1048576                 [m[0;33m    145965 ns      74894 ns [m[0;36m       190[m
+[m[0;32mBM_SetupTeardown/threads:1               [m[0;33m        36 ns         19 ns [m[0;36m    766529[m
+[m[0;32mBM_LongTest/65536                        [m[0;33m    142124 ns      78624 ns [m[0;36m       159[m
+[m[0;32mBM_LongTest/262144                       [m[0;33m    572825 ns     304055 ns [m[0;36m        45[m
+[m[0;32mBM_LongTest/2097152                      [m[0;33m   5722631 ns    2464088 ns [m[0;36m         6[m
+[m[0;32mBM_LongTest/16777216                     [m[0;33m  40345076 ns   20286244 ns [m[0;36m         1[m
+[m[0;32mBM_LongTest/134217728                    [m[0;33m 338191590 ns  160219002 ns [m[0;36m         1[m
+[m[0;32mBM_LongTest/268435456                    [m[0;33m 657275502 ns  322952257 ns [m[0;36m         1[m
+[m[0;32mBM_ParallelMemset/10485760/threads:1     [m[0;33m   4318360 ns    2244114 ns [m[0;36m         7[m
+[m[0;32mBM_ParallelMemset/10485760/threads:2     [m[0;33m   1358087 ns    1061203 ns [m[0;36m        12[m
+[m[0;32mBM_ParallelMemset/10485760/threads:4     [m[0;33m    242800 ns     510749 ns [m[0;36m        24[m
+[m[0;32mBM_ManualTiming/1/real_time              [m[0;33m   1000543 ns       7430 ns [m[0;36m        10[m    999.458 items/s[m
+[m[0;32mBM_ManualTiming/8/real_time              [m[0;33m    502662 ns       7077 ns [m[0;36m        20[m   15.5423k items/s[m
+[m[0;32mBM_ManualTiming/64/real_time             [m[0;33m   1002564 ns       6326 ns [m[0;36m        17[m   62.3401k items/s[m
+[m[0;32mBM_ManualTiming/512/real_time            [m[0;33m   1001212 ns       6621 ns [m[0;36m        10[m   499.395k items/s[m
+[m[0;32mBM_ManualTiming/4096/real_time           [m[0;33m   4815642 ns      10051 ns [m[0;36m         3[m   830.627k items/s[m
+[m[0;32mBM_ManualTiming/16384/real_time          [m[0;33m  16569452 ns      14201 ns [m[0;36m         1[m   965.632k items/s[m
+[m[0;32mBM_ManualTiming/1/manual_time            [m[0;33m   1002104 ns       6758 ns [m[0;36m        10[m    997.901 items/s[m
+[m[0;32mBM_ManualTiming/8/manual_time            [m[0;33m    501042 ns       6384 ns [m[0;36m        23[m   15.5925k items/s[m
+[m[0;32mBM_ManualTiming/64/manual_time           [m[0;33m   1002464 ns       6427 ns [m[0;36m        10[m   62.3464k items/s[m
+[m[0;32mBM_ManualTiming/512/manual_time          [m[0;33m   1001470 ns       7207 ns [m[0;36m        10[m   499.266k items/s[m
+[m[0;32mBM_ManualTiming/4096/manual_time         [m[0;33m   4730310 ns       7449 ns [m[0;36m         3[m   845.611k items/s[m
+[m[0;32mBM_ManualTiming/16384/manual_time        [m[0;33m  16810871 ns       8803 ns [m[0;36m         1[m   951.765k items/s[m
+[m[0;32mBM_with_args/int_test                    [m[0;33m         3 ns          2 ns [m[0;36m   8464999[m
+[m[0;32mBM_with_args/string_and_pair_test        [m[0;33m         4 ns          2 ns [m[0;36m   8388397[m
+[m[0;32mBM_non_template_args/basic_test          [m[0;33m         4 ns          2 ns [m[0;36m   8489850[m
+[m[0;32mBM_DenseThreadRanges/1/threads:1         [m[0;33m         3 ns          2 ns [m[0;36m   8472212[m
+[m[0;32mBM_DenseThreadRanges/1/threads:2         [m[0;33m         2 ns          2 ns [m[0;36m   8375966[m
+[m[0;32mBM_DenseThreadRanges/1/threads:3         [m[0;33m         2 ns          2 ns [m[0;36m   8387955[m
+[m[0;32mBM_DenseThreadRanges/2/threads:1         [m[0;33m         3 ns          2 ns [m[0;36m   8377044[m
+[m[0;32mBM_DenseThreadRanges/2/threads:3         [m[0;33m         2 ns          2 ns [m[0;36m   8381184[m
+[m[0;32mBM_DenseThreadRanges/2/threads:4         [m[0;33m         1 ns          2 ns [m[0;36m   8438628[m
+[m[0;32mBM_DenseThreadRanges/3/threads:5         [m[0;33m         1 ns          2 ns [m[0;36m   8097850[m
+[m[0;32mBM_DenseThreadRanges/3/threads:8         [m[0;33m         1 ns          2 ns [m[0;36m   8185128[m
+[m[0;32mBM_DenseThreadRanges/3/threads:11        [m[0;33m         1 ns          2 ns [m[0;36m   8377886[m
+[m[0;32mBM_DenseThreadRanges/3/threads:14        [m[0;33m         1 ns          2 ns [m[0;36m   8384012[m
+[m
+<end of output>
+Test time =   4.65 sec
+----------------------------------------------------------
+Test Passed.
+"benchmark" end time: Mar 21 09:35 PDT
+"benchmark" time elapsed: 00:00:04
+----------------------------------------------------------
+
+3/34 Testing: filter_simple
+3/34 Test: filter_simple
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=Foo" "3"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_simple" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:17
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mBM_Foo     [m[0;33m         3 ns          2 ns [m[0;36m   7650951[m
+[m[0;32mBM_FooBar  [m[0;33m         4 ns          2 ns [m[0;36m   8457686[m
+[m[0;32mBM_FooBa   [m[0;33m         4 ns          2 ns [m[0;36m   8366251[m
+[m
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"filter_simple" end time: Mar 21 09:35 PDT
+"filter_simple" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/34 Testing: filter_simple_list_only
+4/34 Test: filter_simple_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=Foo" "3"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_simple_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+BM_Foo
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_simple_list_only" end time: Mar 21 09:35 PDT
+"filter_simple_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/34 Testing: filter_suffix
+5/34 Test: filter_suffix
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=BM_.*" "4"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_suffix" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:17
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mBM_Foo     [m[0;33m         4 ns          2 ns [m[0;36m   8391172[m
+[m[0;32mBM_Bar     [m[0;33m         3 ns          2 ns [m[0;36m   7834855[m
+[m[0;32mBM_FooBar  [m[0;33m         4 ns          2 ns [m[0;36m   8597961[m
+[m[0;32mBM_FooBa   [m[0;33m         3 ns          2 ns [m[0;36m   8414989[m
+[m
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"filter_suffix" end time: Mar 21 09:35 PDT
+"filter_suffix" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/34 Testing: filter_suffix_list_only
+6/34 Test: filter_suffix_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=BM_.*" "4"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_suffix_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_suffix_list_only" end time: Mar 21 09:35 PDT
+"filter_suffix_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/34 Testing: filter_regex_all
+7/34 Test: filter_regex_all
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=.*" "5"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_all" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:17
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mNoPrefix   [m[0;33m         4 ns          2 ns [m[0;36m   8465767[m
+[m[0;32mBM_Foo     [m[0;33m         3 ns          2 ns [m[0;36m   8410106[m
+[m[0;32mBM_Bar     [m[0;33m         4 ns          2 ns [m[0;36m   8435427[m
+[m[0;32mBM_FooBar  [m[0;33m         4 ns          2 ns [m[0;36m   8482155[m
+[m[0;32mBM_FooBa   [m[0;33m         4 ns          2 ns [m[0;36m   8433704[m
+[m
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_all" end time: Mar 21 09:35 PDT
+"filter_regex_all" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/34 Testing: filter_regex_all_list_only
+8/34 Test: filter_regex_all_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=.*" "5"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_all_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_all_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_all_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/34 Testing: filter_regex_blank
+9/34 Test: filter_regex_blank
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=" "5"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_blank" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mNoPrefix   [m[0;33m         4 ns          2 ns [m[0;36m   8285200[m
+[m[0;32mBM_Foo     [m[0;33m         3 ns          2 ns [m[0;36m   8300797[m
+[m[0;32mBM_Bar     [m[0;33m         4 ns          2 ns [m[0;36m   8449703[m
+[m[0;32mBM_FooBar  [m[0;33m         4 ns          2 ns [m[0;36m   8390549[m
+[m[0;32mBM_FooBa   [m[0;33m         4 ns          2 ns [m[0;36m   8459189[m
+[m
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_blank" end time: Mar 21 09:35 PDT
+"filter_regex_blank" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/34 Testing: filter_regex_blank_list_only
+10/34 Test: filter_regex_blank_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=" "5"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_blank_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_blank_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_blank_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/34 Testing: filter_regex_none
+11/34 Test: filter_regex_none
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=monkey" "0"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_none" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Failed to match any benchmarks against regex: monkey
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_none" end time: Mar 21 09:35 PDT
+"filter_regex_none" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/34 Testing: filter_regex_none_list_only
+12/34 Test: filter_regex_none_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=monkey" "0"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_none_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Failed to match any benchmarks against regex: monkey
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_none_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_none_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/34 Testing: filter_regex_wildcard
+13/34 Test: filter_regex_wildcard
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=.*Foo.*" "3"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_wildcard" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mBM_Foo     [m[0;33m         4 ns          2 ns [m[0;36m   8429409[m
+[m[0;32mBM_FooBar  [m[0;33m         3 ns          2 ns [m[0;36m   8255442[m
+[m[0;32mBM_FooBa   [m[0;33m         3 ns          2 ns [m[0;36m   8508352[m
+[m
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_wildcard" end time: Mar 21 09:35 PDT
+"filter_regex_wildcard" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/34 Testing: filter_regex_wildcard_list_only
+14/34 Test: filter_regex_wildcard_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=.*Foo.*" "3"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_wildcard_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+BM_Foo
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_wildcard_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_wildcard_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/34 Testing: filter_regex_begin
+15/34 Test: filter_regex_begin
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=^BM_.*" "4"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_begin" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mBM_Foo     [m[0;33m         4 ns          2 ns [m[0;36m   8476028[m
+[m[0;32mBM_Bar     [m[0;33m         4 ns          2 ns [m[0;36m   7960385[m
+[m[0;32mBM_FooBar  [m[0;33m         3 ns          2 ns [m[0;36m   8387744[m
+[m[0;32mBM_FooBa   [m[0;33m         3 ns          2 ns [m[0;36m   8456884[m
+[m
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_begin" end time: Mar 21 09:35 PDT
+"filter_regex_begin" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/34 Testing: filter_regex_begin_list_only
+16/34 Test: filter_regex_begin_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=^BM_.*" "4"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_begin_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_begin_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_begin_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/34 Testing: filter_regex_begin2
+17/34 Test: filter_regex_begin2
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=^N" "1"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_begin2" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mNoPrefix   [m[0;33m         4 ns          2 ns [m[0;36m   8422426[m
+[m
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_begin2" end time: Mar 21 09:35 PDT
+"filter_regex_begin2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/34 Testing: filter_regex_begin2_list_only
+18/34 Test: filter_regex_begin2_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=^N" "1"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_begin2_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+NoPrefix
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_begin2_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_begin2_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/34 Testing: filter_regex_end
+19/34 Test: filter_regex_end
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_min_time=0.01" "--benchmark_filter=.*Ba$" "1"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_end" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+--------------------------------------------------
+Benchmark           Time           CPU Iterations
+--------------------------------------------------
+[0;32mBM_FooBa   [m[0;33m         4 ns          2 ns [m[0;36m   8440304[m
+[m
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_end" end time: Mar 21 09:35 PDT
+"filter_regex_end" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/34 Testing: filter_regex_end_list_only
+20/34 Test: filter_regex_end_list_only
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/filter_test" "--benchmark_list_tests" "--benchmark_filter=.*Ba$" "1"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"filter_regex_end_list_only" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+BM_FooBa
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"filter_regex_end_list_only" end time: Mar 21 09:35 PDT
+"filter_regex_end_list_only" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/34 Testing: options_benchmarks
+21/34 Test: options_benchmarks
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/options_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"options_benchmarks" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:18
+----------------------------------------------------------------------------------------
+Benchmark                                                 Time           CPU Iterations
+----------------------------------------------------------------------------------------
+[0;32mBM_basic                                         [m[0;33m         3 ns          2 ns [m[0;36m   7942686[m
+[m[0;32mBM_basic/42                                      [m[0;33m         3 ns          2 ns [m[0;36m   8433969[m
+[m[0;32mBM_basic_slow/10                                 [m[0;33m  10734864 ns      11247 ns [m[0;36m        10[m
+[m[0;32mBM_basic_slow/100                                [m[0;33m    100300 us         12 us [m[0;36m         1[m
+[m[0;32mBM_basic_slow/1000                               [m[0;33m      1001 ms          0 ms [m[0;36m         1[m
+[m[0;32mBM_basic/1                                       [m[0;33m         3 ns          2 ns [m[0;36m   8387719[m
+[m[0;32mBM_basic/8                                       [m[0;33m         3 ns          2 ns [m[0;36m   8462001[m
+[m[0;32mBM_basic/1                                       [m[0;33m         4 ns          2 ns [m[0;36m   8403407[m
+[m[0;32mBM_basic/2                                       [m[0;33m         4 ns          2 ns [m[0;36m   8514909[m
+[m[0;32mBM_basic/4                                       [m[0;33m         4 ns          2 ns [m[0;36m   8486350[m
+[m[0;32mBM_basic/8                                       [m[0;33m         3 ns          2 ns [m[0;36m   8365331[m
+[m[0;32mBM_basic/10                                      [m[0;33m         4 ns          2 ns [m[0;36m   8542867[m
+[m[0;32mBM_basic/11                                      [m[0;33m         3 ns          2 ns [m[0;36m   8503314[m
+[m[0;32mBM_basic/12                                      [m[0;33m         3 ns          2 ns [m[0;36m   8400981[m
+[m[0;32mBM_basic/13                                      [m[0;33m         3 ns          2 ns [m[0;36m   8451922[m
+[m[0;32mBM_basic/14                                      [m[0;33m         3 ns          2 ns [m[0;36m   8584191[m
+[m[0;32mBM_basic/15                                      [m[0;33m         3 ns          2 ns [m[0;36m   7247375[m
+[m[0;32mBM_basic/42/42                                   [m[0;33m         4 ns          2 ns [m[0;36m   8365361[m
+[m[0;32mBM_basic/64/64                                   [m[0;33m         4 ns          2 ns [m[0;36m   8521538[m
+[m[0;32mBM_basic/512/64                                  [m[0;33m         3 ns          2 ns [m[0;36m   8384278[m
+[m[0;32mBM_basic/64/512                                  [m[0;33m         3 ns          2 ns [m[0;36m   8355141[m
+[m[0;32mBM_basic/512/512                                 [m[0;33m         3 ns          2 ns [m[0;36m   8131205[m
+[m[0;32mBM_basic/min_time:0.700                          [m[0;33m         3 ns          2 ns [m[0;36m 587235626[m
+[m[0;32mBM_basic/real_time                               [m[0;33m         4 ns          2 ns [m[0;36m   8416876[m
+[m[0;32mBM_basic/threads:2                               [m[0;33m         2 ns          2 ns [m[0;36m   8235516[m
+[m[0;32mBM_basic/threads:4                               [m[0;33m         1 ns          2 ns [m[0;36m   8447164[m
+[m[0;32mBM_basic/threads:1                               [m[0;33m         3 ns          2 ns [m[0;36m   8446298[m
+[m[0;32mBM_basic/repeats:3                               [m[0;33m         3 ns          2 ns [m[0;36m   8388106[m
+[m[0;32mBM_basic/repeats:3                               [m[0;33m         3 ns          2 ns [m[0;36m   8388106[m
+[m[0;32mBM_basic/repeats:3                               [m[0;33m         3 ns          2 ns [m[0;36m   8388106[m
+[m[0;32mBM_basic/repeats:3_mean                          [m[0;33m         3 ns          2 ns [m[0;36m   8388106[m
+[m[0;32mBM_basic/repeats:3_stddev                        [m[0;33m         0 ns          0 ns [m[0;36m         0[m
+[m[0;32mBM_basic/0                                       [m[0;33m         4 ns          2 ns [m[0;36m   8512149[m
+[m[0;32mBM_basic/1                                       [m[0;33m         4 ns          2 ns [m[0;36m   8423997[m
+[m[0;32mBM_basic/2                                       [m[0;33m         3 ns          2 ns [m[0;36m   8444698[m
+[m[0;32mBM_basic/3                                       [m[0;33m         3 ns          2 ns [m[0;36m   8477096[m
+[m[0;32mBM_basic/4                                       [m[0;33m         4 ns          2 ns [m[0;36m   8469731[m
+[m[0;32mBM_basic/5                                       [m[0;33m         3 ns          2 ns [m[0;36m   8351089[m
+[m[0;32mBM_basic/6                                       [m[0;33m         4 ns          2 ns [m[0;36m   8491848[m
+[m[0;32mBM_basic/7                                       [m[0;33m         4 ns          2 ns [m[0;36m   8390463[m
+[m[0;32mBM_basic/8                                       [m[0;33m         4 ns          2 ns [m[0;36m   8484694[m
+[m[0;32mBM_basic/9                                       [m[0;33m         3 ns          2 ns [m[0;36m   8498095[m
+[m[0;32mBM_explicit_iteration_count/iterations:42        [m[0;33m        40 ns         25 ns [m[0;36m        42[m
+[m
+<end of output>
+Test time =   4.80 sec
+----------------------------------------------------------
+Test Passed.
+"options_benchmarks" end time: Mar 21 09:35 PDT
+"options_benchmarks" time elapsed: 00:00:04
+----------------------------------------------------------
+
+22/34 Testing: basic_benchmark
+22/34 Test: basic_benchmark
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/basic_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"basic_benchmark" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:23
+-------------------------------------------------------------------------------------
+Benchmark                                              Time           CPU Iterations
+-------------------------------------------------------------------------------------
+[0;32mBM_empty                                      [m[0;33m         3 ns          1 ns [m[0;36m  10006383[m
+[m[0;32mBM_empty/threads:1                            [m[0;33m         3 ns          1 ns [m[0;36m   9930719[m
+[m[0;32mBM_spin_empty/8                               [m[0;33m        15 ns          7 ns [m[0;36m   2049018[m
+[m[0;32mBM_spin_empty/512                             [m[0;33m       573 ns        309 ns [m[0;36m     45710[m
+[m[0;32mBM_spin_empty/8192                            [m[0;33m      8733 ns       4811 ns [m[0;36m      2824[m
+[m[0;32mBM_spin_empty/8/threads:1                     [m[0;33m        13 ns          7 ns [m[0;36m   2053545[m
+[m[0;32mBM_spin_empty/512/threads:1                   [m[0;33m       664 ns        308 ns [m[0;36m     45185[m
+[m[0;32mBM_spin_empty/8192/threads:1                  [m[0;33m      8967 ns       4853 ns [m[0;36m      2940[m
+[m[0;32mBM_spin_pause_before/8                        [m[0;33m        13 ns          6 ns [m[0;36m   2357356[m
+[m[0;32mBM_spin_pause_before/512                      [m[0;33m       853 ns        395 ns [m[0;36m     44199[m
+[m[0;32mBM_spin_pause_before/8192                     [m[0;33m      9982 ns       4791 ns [m[0;36m      2903[m
+[m[0;32mBM_spin_pause_before/8/threads:1              [m[0;33m        13 ns          6 ns [m[0;36m   2400387[m
+[m[0;32mBM_spin_pause_before/512/threads:1            [m[0;33m       575 ns        309 ns [m[0;36m     45367[m
+[m[0;32mBM_spin_pause_before/8192/threads:1           [m[0;33m     11014 ns       5572 ns [m[0;36m      2950[m
+[m[0;32mBM_spin_pause_during/8                        [m[0;33m       814 ns        470 ns [m[0;36m     35053[m
+[m[0;32mBM_spin_pause_during/512                      [m[0;33m      1794 ns        980 ns [m[0;36m     14825[m
+[m[0;32mBM_spin_pause_during/8192                     [m[0;33m     10017 ns       4683 ns [m[0;36m      3005[m
+[m[0;32mBM_spin_pause_during/8/threads:1              [m[0;33m      1027 ns        378 ns [m[0;36m     37081[m
+[m[0;32mBM_spin_pause_during/512/threads:1            [m[0;33m      1711 ns        749 ns [m[0;36m     20516[m
+[m[0;32mBM_spin_pause_during/8192/threads:1           [m[0;33m     10317 ns       4958 ns [m[0;36m      2996[m
+[m[0;32mBM_pause_during                               [m[0;33m       796 ns        371 ns [m[0;36m     37531[m
+[m[0;32mBM_pause_during/threads:1                     [m[0;33m       582 ns        375 ns [m[0;36m     38126[m
+[m[0;32mBM_pause_during/real_time                     [m[0;33m       578 ns        371 ns [m[0;36m     38240[m
+[m[0;32mBM_pause_during/real_time/threads:1           [m[0;33m       595 ns        378 ns [m[0;36m     37827[m
+[m[0;32mBM_spin_pause_after/8                         [m[0;33m         9 ns          5 ns [m[0;36m   2544380[m
+[m[0;32mBM_spin_pause_after/512                       [m[0;33m       483 ns        276 ns [m[0;36m     47187[m
+[m[0;32mBM_spin_pause_after/8192                      [m[0;33m      9271 ns       4519 ns [m[0;36m      3150[m
+[m[0;32mBM_spin_pause_after/8/threads:1               [m[0;33m        13 ns          6 ns [m[0;36m   2536990[m
+[m[0;32mBM_spin_pause_after/512/threads:1             [m[0;33m       536 ns        273 ns [m[0;36m     48993[m
+[m[0;32mBM_spin_pause_after/8192/threads:1            [m[0;33m      9764 ns       4307 ns [m[0;36m      2809[m
+[m[0;32mBM_spin_pause_before_and_after/8              [m[0;33m        12 ns          6 ns [m[0;36m   2337668[m
+[m[0;32mBM_spin_pause_before_and_after/512            [m[0;33m       618 ns        309 ns [m[0;36m     45526[m
+[m[0;32mBM_spin_pause_before_and_after/8192           [m[0;33m      9449 ns       4890 ns [m[0;36m      2873[m
+[m[0;32mBM_spin_pause_before_and_after/8/threads:1    [m[0;33m        12 ns          6 ns [m[0;36m   2386562[m
+[m[0;32mBM_spin_pause_before_and_after/512/threads:1  [m[0;33m       577 ns        308 ns [m[0;36m     44764[m
+[m[0;32mBM_spin_pause_before_and_after/8192/threads:1 [m[0;33m      8798 ns       4778 ns [m[0;36m      2869[m
+[m[0;32mBM_empty_stop_start                           [m[0;33m         3 ns          2 ns [m[0;36m   8135675[m
+[m[0;32mBM_empty_stop_start/threads:1                 [m[0;33m         4 ns          2 ns [m[0;36m   8453346[m
+[m
+<end of output>
+Test time =   2.04 sec
+----------------------------------------------------------
+Test Passed.
+"basic_benchmark" end time: Mar 21 09:35 PDT
+"basic_benchmark" time elapsed: 00:00:02
+----------------------------------------------------------
+
+23/34 Testing: diagnostics_test
+23/34 Test: diagnostics_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/diagnostics_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"diagnostics_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:25
+----------------------------------------------------------
+Benchmark                   Time           CPU Iterations
+----------------------------------------------------------
+[0;32mBM_diagnostic_test [m[0;33m         3 ns          1 ns [m[0;36m   9646836[m
+[m
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"diagnostics_test" end time: Mar 21 09:35 PDT
+"diagnostics_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/34 Testing: skip_with_error_test
+24/34 Test: skip_with_error_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/skip_with_error_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"skip_with_error_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:25
+---------------------------------------------------------------------------
+Benchmark                                    Time           CPU Iterations
+---------------------------------------------------------------------------
+[0;32mBM_error_before_running             [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_during_running/1/threads:1 [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_during_running/1/threads:2 [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_during_running/1/threads:4 [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_during_running/1/threads:8 [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_during_running/2/threads:1 [m[0;33m       919 ns        404 ns [m[0;36m     35157[m
+[m[0;32mBM_error_during_running/2/threads:2 [m[0;33m       746 ns        389 ns [m[0;36m     35384[m
+[m[0;32mBM_error_during_running/2/threads:4 [m[0;33m       370 ns        466 ns [m[0;36m     30640[m
+[m[0;32mBM_error_during_running/2/threads:8 [m[0;33m       404 ns        436 ns [m[0;36m     33000[m
+[m[0;32mBM_error_after_running/threads:1    [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_after_running/threads:2    [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_after_running/threads:4    [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_after_running/threads:8    [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_while_paused/1/threads:1   [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_while_paused/1/threads:2   [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_while_paused/1/threads:4   [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_while_paused/1/threads:8   [m[0;31mERROR OCCURRED: 'error message'[m
+[m[0;32mBM_error_while_paused/2/threads:1   [m[0;33m       658 ns        390 ns [m[0;36m     35618[m
+[m[0;32mBM_error_while_paused/2/threads:2   [m[0;33m      1058 ns        402 ns [m[0;36m     33630[m
+[m[0;32mBM_error_while_paused/2/threads:4   [m[0;33m       713 ns        412 ns [m[0;36m     34348[m
+[m[0;32mBM_error_while_paused/2/threads:8   [m[0;33m       222 ns        413 ns [m[0;36m     36200[m
+[m
+<end of output>
+Test time =   0.65 sec
+----------------------------------------------------------
+Test Passed.
+"skip_with_error_test" end time: Mar 21 09:35 PDT
+"skip_with_error_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/34 Testing: donotoptimize_test
+25/34 Test: donotoptimize_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/donotoptimize_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"donotoptimize_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"donotoptimize_test" end time: Mar 21 09:35 PDT
+"donotoptimize_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/34 Testing: fixture_test
+26/34 Test: fixture_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/fixture_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"fixture_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:26
+------------------------------------------------------------------
+Benchmark                           Time           CPU Iterations
+------------------------------------------------------------------
+[0;32mMyFixture/Foo              [m[0;33m         4 ns          2 ns [m[0;36m   8161804[m
+[m[0;32mMyFixture/Bar/42           [m[0;33m         3 ns          1 ns [m[0;36m   9860662[m   2.82508k items/s[m
+[m[0;32mMyFixture/Bar/42/threads:1 [m[0;33m         3 ns          1 ns [m[0;36m   9340993[m   2.97695k items/s[m
+[m
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"fixture_test" end time: Mar 21 09:35 PDT
+"fixture_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/34 Testing: register_benchmark_test
+27/34 Test: register_benchmark_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/register_benchmark_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"register_benchmark_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:26
+-----------------------------------------------------------------------
+Benchmark                                Time           CPU Iterations
+-----------------------------------------------------------------------
+[0;32mBM_function                     [m[0;33m         3 ns          2 ns [m[0;36m   8296105[m
+[m[0;32mBM_function_manual_registration [m[0;33m         4 ns          2 ns [m[0;36m   8240835[m
+[m[0;32mtest1                           [m[0;33m         3 ns          2 ns [m[0;36m   7465405[m One[m
+[m[0;32mtest2                           [m[0;33m         4 ns          2 ns [m[0;36m   8336256[m Two[m
+[m[0;32mtest3                           [m[0;33m         3 ns          2 ns [m[0;36m   8337423[m Three[m
+[m[0;32mcustom_fixture                  [m[0;33m         3 ns          2 ns [m[0;36m   8290141[m
+[m[0;32mlambda_benchmark                [m[0;33m         3 ns          2 ns [m[0;36m   8359207[m 42[m
+[mFailed to match any benchmarks against regex: .
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:26
+--------------------------------------------------------
+Benchmark                 Time           CPU Iterations
+--------------------------------------------------------
+[0;32mcustom_fixture   [m[0;33m         4 ns          2 ns [m[0;36m   8408484[m
+[m[0;32mlambda_benchmark [m[0;33m         3 ns          2 ns [m[0;36m   7618716[m 42[m
+[m
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"register_benchmark_test" end time: Mar 21 09:35 PDT
+"register_benchmark_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/34 Testing: map_test
+28/34 Test: map_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/map_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"map_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:26
+--------------------------------------------------------------
+Benchmark                       Time           CPU Iterations
+--------------------------------------------------------------
+[0;32mBM_MapLookup/8         [m[0;33m      1538 ns        712 ns [m[0;36m     19503[m   10.7111M items/s[m
+[m[0;32mBM_MapLookup/64        [m[0;33m      7429 ns       4137 ns [m[0;36m      3692[m   14.7549M items/s[m
+[m[0;32mBM_MapLookup/512       [m[0;33m     79540 ns      38626 ns [m[0;36m       386[m   12.6412M items/s[m
+[m[0;32mBM_MapLookup/4096      [m[0;33m   1042358 ns     435091 ns [m[0;36m        32[m     8.978M items/s[m
+[m[0;32mMapFixture/Lookup/8    [m[0;33m       463 ns        236 ns [m[0;36m     69447[m   32.2757M items/s[m
+[m[0;32mMapFixture/Lookup/64   [m[0;33m      6205 ns       2686 ns [m[0;36m      5664[m   22.7263M items/s[m
+[m[0;32mMapFixture/Lookup/512  [m[0;33m     83115 ns      35397 ns [m[0;36m       468[m   13.7946M items/s[m
+[m[0;32mMapFixture/Lookup/4096 [m[0;33m    675257 ns     387315 ns [m[0;36m        27[m   10.0855M items/s[m
+[m
+<end of output>
+Test time =   0.54 sec
+----------------------------------------------------------
+Test Passed.
+"map_test" end time: Mar 21 09:35 PDT
+"map_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/34 Testing: multiple_ranges_test
+29/34 Test: multiple_ranges_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/multiple_ranges_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"multiple_ranges_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:27
+--------------------------------------------------------------------------
+Benchmark                                   Time           CPU Iterations
+--------------------------------------------------------------------------
+[0;32mMultipleRangesFixture/Empty/1/3/5  [m[0;33m        14 ns          7 ns [m[0;36m   2225906[m
+[m[0;32mMultipleRangesFixture/Empty/2/3/5  [m[0;33m        29 ns         14 ns [m[0;36m    930716[m
+[m[0;32mMultipleRangesFixture/Empty/1/4/5  [m[0;33m        21 ns         11 ns [m[0;36m   1000000[m
+[m[0;32mMultipleRangesFixture/Empty/2/4/5  [m[0;33m        56 ns         31 ns [m[0;36m    453714[m
+[m[0;32mMultipleRangesFixture/Empty/1/7/5  [m[0;33m        45 ns         24 ns [m[0;36m    536700[m
+[m[0;32mMultipleRangesFixture/Empty/2/7/5  [m[0;33m        64 ns         31 ns [m[0;36m    540033[m
+[m[0;32mMultipleRangesFixture/Empty/1/3/8  [m[0;33m        28 ns         11 ns [m[0;36m   1000000[m
+[m[0;32mMultipleRangesFixture/Empty/2/3/8  [m[0;33m        68 ns         23 ns [m[0;36m    785897[m
+[m[0;32mMultipleRangesFixture/Empty/1/4/8  [m[0;33m        32 ns         15 ns [m[0;36m   1092418[m
+[m[0;32mMultipleRangesFixture/Empty/2/4/8  [m[0;33m        54 ns         25 ns [m[0;36m    541331[m
+[m[0;32mMultipleRangesFixture/Empty/1/7/8  [m[0;33m        50 ns         22 ns [m[0;36m    495272[m
+[m[0;32mMultipleRangesFixture/Empty/2/7/8  [m[0;33m       104 ns         47 ns [m[0;36m    243197[m
+[m[0;32mMultipleRangesFixture/Empty/1/3/15 [m[0;33m        39 ns         19 ns [m[0;36m    770550[m
+[m[0;32mMultipleRangesFixture/Empty/2/3/15 [m[0;33m        89 ns         40 ns [m[0;36m    305498[m
+[m[0;32mMultipleRangesFixture/Empty/1/4/15 [m[0;33m        41 ns         21 ns [m[0;36m    501236[m
+[m[0;32mMultipleRangesFixture/Empty/2/4/15 [m[0;33m        93 ns         50 ns [m[0;36m    258187[m
+[m[0;32mMultipleRangesFixture/Empty/1/7/15 [m[0;33m       112 ns         50 ns [m[0;36m    314398[m
+[m[0;32mMultipleRangesFixture/Empty/2/7/15 [m[0;33m       185 ns         76 ns [m[0;36m    187911[m
+[m[0;32mMultipleRangesFixture/Empty/7/6/3  [m[0;33m       115 ns         55 ns [m[0;36m    276644[m
+[m[0;32mBM_CheckDefaultArgument/1/6        [m[0;33m         4 ns          2 ns [m[0;36m   7102590[m
+[m[0;32mBM_CheckDefaultArgument/5/6        [m[0;33m         3 ns          2 ns [m[0;36m   7696118[m
+[m[0;32mBM_CheckDefaultArgument/1/8        [m[0;33m         4 ns          2 ns [m[0;36m   7188024[m
+[m[0;32mBM_CheckDefaultArgument/5/8        [m[0;33m         4 ns          2 ns [m[0;36m   7724368[m
+[m[0;32mBM_CheckDefaultArgument/1/10       [m[0;33m         3 ns          2 ns [m[0;36m   7455847[m
+[m[0;32mBM_CheckDefaultArgument/5/10       [m[0;33m         4 ns          2 ns [m[0;36m   7890938[m
+[m[0;32mBM_MultipleRanges/5/6              [m[0;33m         4 ns          2 ns [m[0;36m   7479867[m
+[m
+<end of output>
+Test time =   1.00 sec
+----------------------------------------------------------
+Test Passed.
+"multiple_ranges_test" end time: Mar 21 09:35 PDT
+"multiple_ranges_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/34 Testing: reporter_output_test
+30/34 Test: reporter_output_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/reporter_output_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"reporter_output_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:28
+-----------------------------------------------------------------------------
+Benchmark                                      Time           CPU Iterations
+-----------------------------------------------------------------------------
+BM_basic                                       3 ns          2 ns    6084182
+BM_bytes_per_second                            4 ns          2 ns    6525018     77.661B/s
+BM_items_per_second                            5 ns          2 ns    7040954    72.2487 items/s
+BM_label                                       3 ns          2 ns    8194879 some label
+BM_error                              ERROR OCCURRED: 'message'
+BM_no_arg_name/3                               4 ns          2 ns    7804365
+BM_arg_name/first:3                            4 ns          2 ns    8142276
+BM_arg_names/first:2/5/third:4                 4 ns          2 ns    7304358
+BM_Complexity_O1/1                             3 ns          2 ns    7808705
+BM_Complexity_O1/8                             4 ns          2 ns    7022063
+BM_Complexity_O1/64                            4 ns          2 ns    8325518
+BM_Complexity_O1/512                           4 ns          2 ns    7741543
+BM_Complexity_O1/4096                          4 ns          2 ns    8212719
+BM_Complexity_O1/32768                         4 ns          2 ns    7901859
+BM_Complexity_O1/262144                        4 ns          2 ns    7889569
+BM_Complexity_O1_BigO                       3.94 (1)       1.84 (1) 
+BM_Complexity_O1_RMS                           7 %          2 % 
+BM_Repeat/repeats:3                            4 ns          2 ns    7841846
+BM_Repeat/repeats:3                            4 ns          2 ns    7841846
+BM_Repeat/repeats:3                            3 ns          2 ns    7841846
+BM_Repeat/repeats:3_mean                       4 ns          2 ns    7841846
+BM_Repeat/repeats:3_stddev                     0 ns          0 ns          0
+BM_RepeatOnce/repeats:1                        4 ns          2 ns    8131540
+BM_SummaryRepeat/repeats:3_mean                4 ns          2 ns    7403013
+BM_SummaryRepeat/repeats:3_stddev              0 ns          0 ns          0
+BM_RepeatTimeUnit/repeats:3_mean               0 us          0 us    6047459
+BM_RepeatTimeUnit/repeats:3_stddev             0 us          0 us          0
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  "context": {
+    "date": "2018-03-21 09:35:28",
+    "num_cpus": 1,
+    "mhz_per_cpu": 2904,
+    "cpu_scaling_enabled": false,
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_basic",
+      "iterations": 6084182,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_bytes_per_second",
+      "iterations": 6525018,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bytes_per_second": 78
+    },
+    {
+      "name": "BM_items_per_second",
+      "iterations": 7040954,
+      "real_time": 5,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "items_per_second": 72
+    },
+    {
+      "name": "BM_label",
+      "iterations": 8194879,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "label": "some label"
+    },
+    {
+      "name": "BM_error",
+      "error_occurred": true,
+      "error_message": "message",
+      "iterations": 1,
+      "real_time": 0,
+      "cpu_time": 0,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_no_arg_name/3",
+      "iterations": 7804365,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_arg_name/first:3",
+      "iterations": 8142276,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_arg_names/first:2/5/third:4",
+      "iterations": 7304358,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/1",
+      "iterations": 7808705,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/8",
+      "iterations": 7022063,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/64",
+      "iterations": 8325518,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/512",
+      "iterations": 7741543,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/4096",
+      "iterations": 8212719,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/32768",
+      "iterations": 7901859,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/262144",
+      "iterations": 7889569,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_BigO",
+      "cpu_coefficient": 2,
+      "real_coefficient": 4,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_RMS",
+      "rms": 0.02
+    },
+    {
+      "name": "BM_Repeat/repeats:3",
+      "iterations": 7841846,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Repeat/repeats:3",
+      "iterations": 7841846,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Repeat/repeats:3",
+      "iterations": 7841846,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Repeat/repeats:3_mean",
+      "iterations": 7841846,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Repeat/repeats:3_stddev",
+      "iterations": 0,
+      "real_time": 0,
+      "cpu_time": 0,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_RepeatOnce/repeats:1",
+      "iterations": 8131540,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3_mean",
+      "iterations": 7403013,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_SummaryRepeat/repeats:3_stddev",
+      "iterations": 0,
+      "real_time": 0,
+      "cpu_time": 0,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_RepeatTimeUnit/repeats:3_mean",
+      "iterations": 6047459,
+      "real_time": 0,
+      "cpu_time": 0,
+      "time_unit": "us"
+    },
+    {
+      "name": "BM_RepeatTimeUnit/repeats:3_stddev",
+      "iterations": 0,
+      "real_time": 0,
+      "cpu_time": 0,
+      "time_unit": "us"
+    }
+  ]
+}
+
+---------------------------
+Testing CSVReporter Output
+---------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:28
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"BM_basic",6084182,3.32664,1.85262,ns,,,,,
+"BM_bytes_per_second",6525018,3.66529,1.9734,ns,77.661,,,,
+"BM_items_per_second",7040954,4.52519,1.9658,ns,,72.2487,,,
+"BM_label",8194879,3.40818,1.82102,ns,,,"some label",,
+"BM_error",,,,,,,,true,"message"
+"BM_no_arg_name/3",7804365,3.79587,1.87897,ns,,,,,
+"BM_arg_name/first:3",8142276,3.94001,1.85837,ns,,,,,
+"BM_arg_names/first:2/5/third:4",7304358,3.9069,1.89,ns,,,,,
+"BM_Complexity_O1/1",7808705,3.36997,1.79916,ns,,,,,
+"BM_Complexity_O1/8",7022063,4.00968,1.88942,ns,,,,,
+"BM_Complexity_O1/64",8325518,3.94115,1.83479,ns,,,,,
+"BM_Complexity_O1/512",7741543,4.2065,1.82105,ns,,,,,
+"BM_Complexity_O1/4096",8212719,4.18669,1.85417,ns,,,,,
+"BM_Complexity_O1/32768",7901859,4.13257,1.82175,ns,,,,,
+"BM_Complexity_O1/262144",7889569,3.70086,1.86593,ns,,,,,
+"BM_Complexity_O1_BigO",,3.93535,1.8409,(1),,,,,
+"BM_Complexity_O1_RMS",,0.071602,0.0154965,,,,,,
+"BM_Repeat/repeats:3",7841846,4.28951,1.88874,ns,,,,,
+"BM_Repeat/repeats:3",7841846,3.67434,1.84875,ns,,,,,
+"BM_Repeat/repeats:3",7841846,3.44859,1.71915,ns,,,,,
+"BM_Repeat/repeats:3_mean",7841846,3.80414,1.81888,ns,,,,,
+"BM_Repeat/repeats:3_stddev",0,0.435229,0.088654,ns,,,,,
+"BM_RepeatOnce/repeats:1",8131540,3.70629,1.77769,ns,,,,,
+"BM_SummaryRepeat/repeats:3_mean",7403013,3.84129,1.8775,ns,,,,,
+"BM_SummaryRepeat/repeats:3_stddev",0,0.274642,0.0939388,ns,,,,,
+"BM_RepeatTimeUnit/repeats:3_mean",6047459,0.00365775,0.00178602,us,,,,,
+"BM_RepeatTimeUnit/repeats:3_stddev",0,0.000494705,4.72538e-05,us,,,,,
+
+<end of output>
+Test time =   0.94 sec
+----------------------------------------------------------
+Test Passed.
+"reporter_output_test" end time: Mar 21 09:35 PDT
+"reporter_output_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/34 Testing: user_counters_test
+31/34 Test: user_counters_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/user_counters_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"user_counters_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:29
+--------------------------------------------------------------------------------------------
+Benchmark                                     Time           CPU Iterations UserCounters...
+--------------------------------------------------------------------------------------------
+BM_Counters_Simple                            4 ns          2 ns    7859446 bar=14.9907M foo=1
+BM_Counters_WithBytesAndItemsPSec             4 ns          2 ns    8142768 bar=8 foo=1   23.0705kB/s   9.50705k items/s
+BM_Counters_Rate                              4 ns          2 ns    8287520 bar=135.005/s foo=67.5025/s
+BM_Counters_Threads/threads:1                 3 ns          2 ns    7518054 bar=2 foo=1
+BM_Counters_Threads/threads:2                 3 ns          2 ns    6889512 bar=4 foo=2
+BM_Counters_Threads/threads:4                 1 ns          2 ns    6534836 bar=8 foo=4
+BM_Counters_Threads/threads:8                 1 ns          2 ns    8241096 bar=16 foo=8
+BM_Counters_AvgThreads/threads:1              4 ns          2 ns    8289674 bar=2 foo=1
+BM_Counters_AvgThreads/threads:2              2 ns          2 ns    8036514 bar=2 foo=1
+BM_Counters_AvgThreads/threads:4              1 ns          2 ns    7653556 bar=2 foo=1
+BM_Counters_AvgThreads/threads:8              1 ns          2 ns    8341040 bar=2 foo=1
+BM_Counters_AvgThreadsRate/threads:1          3 ns          2 ns    7094218 bar=159.928/s foo=79.9642/s
+BM_Counters_AvgThreadsRate/threads:2          3 ns          2 ns    7981442 bar=141.962/s foo=70.9808/s
+BM_Counters_AvgThreadsRate/threads:4          1 ns          2 ns    8222132 bar=136.57/s foo=68.2848/s
+BM_Counters_AvgThreadsRate/threads:8          0 ns          2 ns    7407896 bar=151/s foo=75.5/s
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  "context": {
+    "date": "2018-03-21 09:35:29",
+    "num_cpus": 1,
+    "mhz_per_cpu": 2904,
+    "cpu_scaling_enabled": false,
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_Counters_Simple",
+      "iterations": 7859446,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 15718892,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_WithBytesAndItemsPSec",
+      "iterations": 8142768,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bytes_per_second": 23624,
+      "items_per_second": 9735,
+      "bar": 8,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_Rate",
+      "iterations": 8287520,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 135,
+      "foo": 68
+    },
+    {
+      "name": "BM_Counters_Threads/threads:1",
+      "iterations": 7518054,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 2,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_Threads/threads:2",
+      "iterations": 6889512,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 4,
+      "foo": 2
+    },
+    {
+      "name": "BM_Counters_Threads/threads:4",
+      "iterations": 6534836,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 8,
+      "foo": 4
+    },
+    {
+      "name": "BM_Counters_Threads/threads:8",
+      "iterations": 8241096,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 16,
+      "foo": 8
+    },
+    {
+      "name": "BM_Counters_AvgThreads/threads:1",
+      "iterations": 8289674,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 2,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_AvgThreads/threads:2",
+      "iterations": 8036514,
+      "real_time": 2,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 2,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_AvgThreads/threads:4",
+      "iterations": 7653556,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 2,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_AvgThreads/threads:8",
+      "iterations": 8341040,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 2,
+      "foo": 1
+    },
+    {
+      "name": "BM_Counters_AvgThreadsRate/threads:1",
+      "iterations": 7094218,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 160,
+      "foo": 80
+    },
+    {
+      "name": "BM_Counters_AvgThreadsRate/threads:2",
+      "iterations": 7981442,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 142,
+      "foo": 71
+    },
+    {
+      "name": "BM_Counters_AvgThreadsRate/threads:4",
+      "iterations": 8222132,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 137,
+      "foo": 68
+    },
+    {
+      "name": "BM_Counters_AvgThreadsRate/threads:8",
+      "iterations": 7407896,
+      "real_time": 0,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "bar": 151,
+      "foo": 76
+    }
+  ]
+}
+
+---------------------------
+Testing CSVReporter Output
+---------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:29
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message,"bar","foo"
+"BM_Counters_Simple",7859446,3.97702,1.82095,ns,,,,,,1.57189e+07,1
+"BM_Counters_WithBytesAndItemsPSec",8142768,4.0935,1.89223,ns,23624.1,9735.22,,,,8,1
+"BM_Counters_Rate",8287520,3.77721,1.78754,ns,,,,,,135.005,67.5025
+"BM_Counters_Threads/threads:1",7518054,3.20361,1.7754,ns,,,,,,2,1
+"BM_Counters_Threads/threads:2",6889512,3.18417,1.85417,ns,,,,,,4,2
+"BM_Counters_Threads/threads:4",6534836,0.986346,1.71331,ns,,,,,,8,4
+"BM_Counters_Threads/threads:8",8241096,1.13425,1.80161,ns,,,,,,16,8
+"BM_Counters_AvgThreads/threads:1",8289674,4.01918,1.80677,ns,,,,,,2,1
+"BM_Counters_AvgThreads/threads:2",8036514,2.03231,1.80599,ns,,,,,,2,1
+"BM_Counters_AvgThreads/threads:4",7653556,1.45709,1.75598,ns,,,,,,2,1
+"BM_Counters_AvgThreads/threads:8",8341040,0.553318,1.83354,ns,,,,,,2,1
+"BM_Counters_AvgThreadsRate/threads:1",7094218,3.37979,1.76279,ns,,,,,,159.928,79.9642
+"BM_Counters_AvgThreadsRate/threads:2",7981442,2.60647,1.76513,ns,,,,,,141.962,70.9808
+"BM_Counters_AvgThreadsRate/threads:4",8222132,1.36934,1.78111,ns,,,,,,136.57,68.2848
+"BM_Counters_AvgThreadsRate/threads:8",7407896,0.389559,1.78796,ns,,,,,,151,75.5
+
+<end of output>
+Test time =   0.70 sec
+----------------------------------------------------------
+Test Passed.
+"user_counters_test" end time: Mar 21 09:35 PDT
+"user_counters_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/34 Testing: user_counters_tabular_test
+32/34 Test: user_counters_tabular_test
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/user_counters_tabular_test" "--benchmark_counters_tabular=true" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"user_counters_tabular_test" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:30
+--------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                   Time           CPU Iterations        Bar        Bat        Baz        Foo       Frob        Lob
+--------------------------------------------------------------------------------------------------------------------------------------------
+BM_Counters_Tabular/threads:1               3 ns          2 ns    8028204          2          8          4          1         16         32
+BM_Counters_Tabular/threads:2               2 ns          2 ns    7277294          2          8          4          1         16         32
+BM_Counters_Tabular/threads:4               1 ns          2 ns    7827656          2          8          4          1         16         32
+BM_Counters_Tabular/threads:8               0 ns          2 ns    8317704          2          8          4          1         16         32
+BM_Counters_Tabular/threads:16              0 ns          2 ns    8143152          2          8          4          1         16         32
+BM_CounterRates_Tabular/threads:1           4 ns          2 ns    8274892  138.397/s  553.586/s  276.793/s  69.1983/s  1107.17/s 2.16245k/s
+BM_CounterRates_Tabular/threads:2           3 ns          2 ns    7704318  140.567/s  562.267/s  281.133/s  70.2833/s  1124.53/s 2.19635k/s
+BM_CounterRates_Tabular/threads:4           2 ns          2 ns    7497804  144.851/s  579.402/s  289.701/s  72.4253/s 1.13164k/s 2.26329k/s
+BM_CounterRates_Tabular/threads:8           2 ns          2 ns    6367768  155.706/s  622.823/s  311.411/s  77.8528/s 1.21645k/s  2.4329k/s
+BM_CounterRates_Tabular/threads:16          1 ns          2 ns    7926560  142.307/s  569.228/s  284.614/s  71.1535/s 1.11177k/s 2.22355k/s
+-----------------------------------------------------------------------------------------------------------
+Benchmark                                   Time           CPU Iterations        Bar        Baz        Foo
+-----------------------------------------------------------------------------------------------------------
+BM_CounterSet0_Tabular/threads:1            4 ns          2 ns    8277338         20         40         10
+BM_CounterSet0_Tabular/threads:2            3 ns          2 ns    7727478         20         40         10
+BM_CounterSet0_Tabular/threads:4            1 ns          2 ns    7901404         20         40         10
+BM_CounterSet0_Tabular/threads:8            1 ns          2 ns    7763832         20         40         10
+BM_CounterSet0_Tabular/threads:16           0 ns          2 ns    8176160         20         40         10
+BM_CounterSet1_Tabular/threads:1            4 ns          2 ns    7808478         25         45         15
+BM_CounterSet1_Tabular/threads:2            3 ns          2 ns    7528956         25         45         15
+BM_CounterSet1_Tabular/threads:4            1 ns          2 ns    7365116         25         45         15
+BM_CounterSet1_Tabular/threads:8            1 ns          2 ns    7734568         25         45         15
+BM_CounterSet1_Tabular/threads:16           1 ns          2 ns    6205392         25         45         15
+-----------------------------------------------------------------------------------------------------------
+Benchmark                                   Time           CPU Iterations        Bat        Baz        Foo
+-----------------------------------------------------------------------------------------------------------
+BM_CounterSet2_Tabular/threads:1            4 ns          2 ns    7557694         30         40         10
+BM_CounterSet2_Tabular/threads:2            3 ns          2 ns    6430898         30         40         10
+BM_CounterSet2_Tabular/threads:4            2 ns          2 ns    8136916         30         40         10
+BM_CounterSet2_Tabular/threads:8            1 ns          2 ns    8395560         30         40         10
+BM_CounterSet2_Tabular/threads:16           0 ns          2 ns    6942800         30         40         10
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  "context": {
+    "date": "2018-03-21 09:35:30",
+    "num_cpus": 1,
+    "mhz_per_cpu": 2904,
+    "cpu_scaling_enabled": false,
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_Counters_Tabular/threads:1",
+      "iterations": 8028204,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 2,
+      "Bat": 8,
+      "Baz": 4,
+      "Foo": 1,
+      "Frob": 16,
+      "Lob": 32
+    },
+    {
+      "name": "BM_Counters_Tabular/threads:2",
+      "iterations": 7277294,
+      "real_time": 2,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 2,
+      "Bat": 8,
+      "Baz": 4,
+      "Foo": 1,
+      "Frob": 16,
+      "Lob": 32
+    },
+    {
+      "name": "BM_Counters_Tabular/threads:4",
+      "iterations": 7827656,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 2,
+      "Bat": 8,
+      "Baz": 4,
+      "Foo": 1,
+      "Frob": 16,
+      "Lob": 32
+    },
+    {
+      "name": "BM_Counters_Tabular/threads:8",
+      "iterations": 8317704,
+      "real_time": 0,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 2,
+      "Bat": 8,
+      "Baz": 4,
+      "Foo": 1,
+      "Frob": 16,
+      "Lob": 32
+    },
+    {
+      "name": "BM_Counters_Tabular/threads:16",
+      "iterations": 8143152,
+      "real_time": 0,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 2,
+      "Bat": 8,
+      "Baz": 4,
+      "Foo": 1,
+      "Frob": 16,
+      "Lob": 32
+    },
+    {
+      "name": "BM_CounterRates_Tabular/threads:1",
+      "iterations": 8274892,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 138,
+      "Bat": 554,
+      "Baz": 277,
+      "Foo": 69,
+      "Frob": 1107,
+      "Lob": 2214
+    },
+    {
+      "name": "BM_CounterRates_Tabular/threads:2",
+      "iterations": 7704318,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 141,
+      "Bat": 562,
+      "Baz": 281,
+      "Foo": 70,
+      "Frob": 1125,
+      "Lob": 2249
+    },
+    {
+      "name": "BM_CounterRates_Tabular/threads:4",
+      "iterations": 7497804,
+      "real_time": 2,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 145,
+      "Bat": 579,
+      "Baz": 290,
+      "Foo": 72,
+      "Frob": 1159,
+      "Lob": 2318
+    },
+    {
+      "name": "BM_CounterRates_Tabular/threads:8",
+      "iterations": 6367768,
+      "real_time": 2,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 156,
+      "Bat": 623,
+      "Baz": 311,
+      "Foo": 78,
+      "Frob": 1246,
+      "Lob": 2491
+    },
+    {
+      "name": "BM_CounterRates_Tabular/threads:16",
+      "iterations": 7926560,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 142,
+      "Bat": 569,
+      "Baz": 285,
+      "Foo": 71,
+      "Frob": 1138,
+      "Lob": 2277
+    },
+    {
+      "name": "BM_CounterSet0_Tabular/threads:1",
+      "iterations": 8277338,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 20,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet0_Tabular/threads:2",
+      "iterations": 7727478,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 20,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet0_Tabular/threads:4",
+      "iterations": 7901404,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 20,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet0_Tabular/threads:8",
+      "iterations": 7763832,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 20,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet0_Tabular/threads:16",
+      "iterations": 8176160,
+      "real_time": 0,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 20,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet1_Tabular/threads:1",
+      "iterations": 7808478,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 25,
+      "Baz": 45,
+      "Foo": 15
+    },
+    {
+      "name": "BM_CounterSet1_Tabular/threads:2",
+      "iterations": 7528956,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 25,
+      "Baz": 45,
+      "Foo": 15
+    },
+    {
+      "name": "BM_CounterSet1_Tabular/threads:4",
+      "iterations": 7365116,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 25,
+      "Baz": 45,
+      "Foo": 15
+    },
+    {
+      "name": "BM_CounterSet1_Tabular/threads:8",
+      "iterations": 7734568,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 25,
+      "Baz": 45,
+      "Foo": 15
+    },
+    {
+      "name": "BM_CounterSet1_Tabular/threads:16",
+      "iterations": 6205392,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bar": 25,
+      "Baz": 45,
+      "Foo": 15
+    },
+    {
+      "name": "BM_CounterSet2_Tabular/threads:1",
+      "iterations": 7557694,
+      "real_time": 4,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bat": 30,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet2_Tabular/threads:2",
+      "iterations": 6430898,
+      "real_time": 3,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bat": 30,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet2_Tabular/threads:4",
+      "iterations": 8136916,
+      "real_time": 2,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bat": 30,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet2_Tabular/threads:8",
+      "iterations": 8395560,
+      "real_time": 1,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bat": 30,
+      "Baz": 40,
+      "Foo": 10
+    },
+    {
+      "name": "BM_CounterSet2_Tabular/threads:16",
+      "iterations": 6942800,
+      "real_time": 0,
+      "cpu_time": 2,
+      "time_unit": "ns",
+      "Bat": 30,
+      "Baz": 40,
+      "Foo": 10
+    }
+  ]
+}
+
+---------------------------
+Testing CSVReporter Output
+---------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:30
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message,"Bar","Bat","Baz","Foo","Frob","Lob"
+"BM_Counters_Tabular/threads:1",8028204,3.17868,1.77914,ns,,,,,,2,8,4,1,16,32
+"BM_Counters_Tabular/threads:2",7277294,2.46555,1.77874,ns,,,,,,2,8,4,1,16,32
+"BM_Counters_Tabular/threads:4",7827656,1.07213,1.78985,ns,,,,,,2,8,4,1,16,32
+"BM_Counters_Tabular/threads:8",8317704,0.435201,1.80029,ns,,,,,,2,8,4,1,16,32
+"BM_Counters_Tabular/threads:16",8143152,0.379049,1.77087,ns,,,,,,2,8,4,1,16,32
+"BM_CounterRates_Tabular/threads:1",8274892,3.69704,1.74639,ns,,,,,,138.397,553.586,276.793,69.1983,1107.17,2214.35
+"BM_CounterRates_Tabular/threads:2",7704318,2.66169,1.84677,ns,,,,,,140.567,562.267,281.133,70.2833,1124.53,2249.07
+"BM_CounterRates_Tabular/threads:4",7497804,1.57276,1.84152,ns,,,,,,144.851,579.402,289.701,72.4253,1158.8,2317.61
+"BM_CounterRates_Tabular/threads:8",6367768,1.69717,2.01715,ns,,,,,,155.706,622.823,311.411,77.8528,1245.65,2491.29
+"BM_CounterRates_Tabular/threads:16",7926560,0.525162,1.77304,ns,,,,,,142.307,569.228,284.614,71.1535,1138.46,2276.91
+"BM_CounterSet0_Tabular/threads:1",8277338,4.19022,1.84928,ns,,,,,,20,,40,10,,
+"BM_CounterSet0_Tabular/threads:2",7727478,3.29908,1.91551,ns,,,,,,20,,40,10,,
+"BM_CounterSet0_Tabular/threads:4",7901404,1.47315,1.83053,ns,,,,,,20,,40,10,,
+"BM_CounterSet0_Tabular/threads:8",7763832,0.805957,1.86374,ns,,,,,,20,,40,10,,
+"BM_CounterSet0_Tabular/threads:16",8176160,0.380854,1.83179,ns,,,,,,20,,40,10,,
+"BM_CounterSet1_Tabular/threads:1",7808478,3.77753,1.76786,ns,,,,,,25,,45,15,,
+"BM_CounterSet1_Tabular/threads:2",7528956,2.73553,1.87033,ns,,,,,,25,,45,15,,
+"BM_CounterSet1_Tabular/threads:4",7365116,0.959673,1.73455,ns,,,,,,25,,45,15,,
+"BM_CounterSet1_Tabular/threads:8",7734568,1.23019,1.86396,ns,,,,,,25,,45,15,,
+"BM_CounterSet1_Tabular/threads:16",6205392,0.590834,1.83363,ns,,,,,,25,,45,15,,
+"BM_CounterSet2_Tabular/threads:1",7557694,4.12034,1.78385,ns,,,,,,,30,40,10,,
+"BM_CounterSet2_Tabular/threads:2",6430898,2.93229,1.86183,ns,,,,,,,30,40,10,,
+"BM_CounterSet2_Tabular/threads:4",8136916,2.32457,1.78955,ns,,,,,,,30,40,10,,
+"BM_CounterSet2_Tabular/threads:8",8395560,1.25236,1.85846,ns,,,,,,,30,40,10,,
+"BM_CounterSet2_Tabular/threads:16",6942800,0.389009,1.80075,ns,,,,,,,30,40,10,,
+
+<end of output>
+Test time =   1.34 sec
+----------------------------------------------------------
+Test Passed.
+"user_counters_tabular_test" end time: Mar 21 09:35 PDT
+"user_counters_tabular_test" time elapsed: 00:00:01
+----------------------------------------------------------
+
+33/34 Testing: cxx03
+33/34 Test: cxx03
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/cxx03_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"cxx03" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:31
+----------------------------------------------------------------------
+Benchmark                               Time           CPU Iterations
+----------------------------------------------------------------------
+[0;32mBM_empty                       [m[0;33m         4 ns          2 ns [m[0;36m   8594530[m
+[m[0;32mBM_old_arg_range_interface/1/2 [m[0;33m         4 ns          2 ns [m[0;36m   8268998[m
+[m[0;32mBM_old_arg_range_interface/5/6 [m[0;33m         4 ns          2 ns [m[0;36m   8007216[m
+[m[0;32mBM_template2<int,long>         [m[0;33m         3 ns          2 ns [m[0;36m   6068653[m
+[m[0;32mBM_template1<long>             [m[0;33m         4 ns          2 ns [m[0;36m   7954464[m
+[m[0;32mBM_template1<int>              [m[0;33m         4 ns          2 ns [m[0;36m   7560142[m
+[m[0;32mBM_counters                    [m[0;33m         3 ns          2 ns [m[0;36m   7898025[m Foo=2[m
+[m
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Passed.
+"cxx03" end time: Mar 21 09:35 PDT
+"cxx03" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/34 Testing: complexity_benchmark
+34/34 Test: complexity_benchmark
+Command: "/home/ofir123dubi/deformetrica_build/lib/benchmark/test/complexity_test" "--benchmark_min_time=0.01"
+Directory: /home/ofir123dubi/deformetrica_build/lib/benchmark/test
+"complexity_benchmark" start time: Mar 21 09:35 PDT
+Output:
+----------------------------------------------------------
+Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:31
+---------------------------------------------------------------------
+Benchmark                              Time           CPU Iterations
+---------------------------------------------------------------------
+BM_Complexity_O1/1                  3779 ns       1582 ns       9867
+BM_Complexity_O1/8                  3395 ns       1563 ns       9063
+BM_Complexity_O1/64                 3254 ns       1494 ns       8786
+BM_Complexity_O1/512                2765 ns       1535 ns       9470
+BM_Complexity_O1/4096               3176 ns       1566 ns       9652
+BM_Complexity_O1/32768              3102 ns       1512 ns       9379
+BM_Complexity_O1/262144             3098 ns       1542 ns       9324
+BM_Complexity_O1_BigO            3224.05 (1)    1542.09 (1) 
+BM_Complexity_O1_RMS                   9 %          2 % 
+BM_Complexity_O1/1                  2886 ns       1504 ns       9450
+BM_Complexity_O1/8                  2772 ns       1482 ns       9053
+BM_Complexity_O1/64                 3203 ns       1500 ns       9445
+BM_Complexity_O1/512                4187 ns       1547 ns       9027
+BM_Complexity_O1/4096               3950 ns       1552 ns       9690
+BM_Complexity_O1/32768              3225 ns       1553 ns       9232
+BM_Complexity_O1/262144             3549 ns       1588 ns       8669
+BM_Complexity_O1_BigO            3395.93 (1)    1532.19 (1) 
+BM_Complexity_O1_RMS                  14 %          2 % 
+BM_Complexity_O1/1                  2932 ns       1479 ns       8100
+BM_Complexity_O1/8                  3219 ns       1515 ns       9397
+BM_Complexity_O1/64                 3200 ns       1501 ns       9450
+BM_Complexity_O1/512                3256 ns       1482 ns       9892
+BM_Complexity_O1/4096               2541 ns       1449 ns       9258
+BM_Complexity_O1/32768              3676 ns       1643 ns       9944
+BM_Complexity_O1/262144             3271 ns       1598 ns       7934
+BM_Complexity_O1_BigO            3156.36 f(N)    1523.85 f(N) 
+BM_Complexity_O1_RMS                  10 %          4 % 
+BM_Complexity_O_N/1024               425 ns        220 ns      66637
+BM_Complexity_O_N/2048               803 ns        435 ns      32639
+BM_Complexity_O_N/4096              1731 ns        832 ns      15660
+BM_Complexity_O_N/8192              4113 ns       1877 ns       8256
+BM_Complexity_O_N/16384             7809 ns       3633 ns       4602
+BM_Complexity_O_N/32768            14623 ns       7379 ns       2022
+BM_Complexity_O_N/65536            23386 ns      13678 ns        866
+BM_Complexity_O_N_BigO              0.38 N       0.21 N 
+BM_Complexity_O_N_RMS                 16 %          5 % 
+BM_Complexity_O_N/1024               477 ns        222 ns      60110
+BM_Complexity_O_N/2048               717 ns        423 ns      32983
+BM_Complexity_O_N/4096              2019 ns        914 ns      14154
+BM_Complexity_O_N/8192              4239 ns       1793 ns       9074
+BM_Complexity_O_N/16384             7736 ns       4006 ns       3773
+BM_Complexity_O_N/32768            12961 ns       6746 ns       1811
+BM_Complexity_O_N/65536            35573 ns      14756 ns        806
+BM_Complexity_O_N_BigO              0.51 f(N)       0.22 f(N) 
+BM_Complexity_O_N_RMS                 18 %          6 % 
+BM_Complexity_O_N/1024               429 ns        216 ns      56639
+BM_Complexity_O_N/2048               921 ns        424 ns      31589
+BM_Complexity_O_N/4096              1592 ns        882 ns      12480
+BM_Complexity_O_N/8192              3553 ns       1753 ns       8504
+BM_Complexity_O_N/16384             6321 ns       3434 ns       4573
+BM_Complexity_O_N/32768            15567 ns       7291 ns       2014
+BM_Complexity_O_N/65536            29284 ns      14636 ns        869
+BM_Complexity_O_N_BigO              0.45 N       0.22 N 
+BM_Complexity_O_N_RMS                  6 %          2 % 
+BM_Complexity_O_N_log_N/1024       14771 ns       6956 ns       2095
+BM_Complexity_O_N_log_N/2048       32868 ns      16702 ns        861
+BM_Complexity_O_N_log_N/4096       75960 ns      37727 ns        337
+BM_Complexity_O_N_log_N/8192      243052 ns     120329 ns        122
+BM_Complexity_O_N_log_N/16384     386539 ns     200271 ns         54
+BM_Complexity_O_N_log_N/32768     936463 ns     464483 ns         32
+BM_Complexity_O_N_log_N/65536    2539158 ns    1259054 ns         12
+BM_Complexity_O_N_log_N_BigO        2.30 NlgN       1.14 NlgN 
+BM_Complexity_O_N_log_N_RMS           17 %         17 % 
+BM_Complexity_O_N_log_N/1024       11064 ns       6553 ns       2151
+BM_Complexity_O_N_log_N/2048       33530 ns      17021 ns        733
+BM_Complexity_O_N_log_N/4096       72651 ns      37101 ns        348
+BM_Complexity_O_N_log_N/8192      170229 ns      87947 ns        145
+BM_Complexity_O_N_log_N/16384     374667 ns     189510 ns         58
+BM_Complexity_O_N_log_N/32768    1123787 ns     490484 ns         25
+BM_Complexity_O_N_log_N/65536    2133298 ns    1103760 ns         12
+BM_Complexity_O_N_log_N_BigO        2.06 f(N)       1.03 f(N) 
+BM_Complexity_O_N_log_N_RMS           11 %          8 % 
+BM_Complexity_O_N_log_N/1024       15639 ns       7366 ns       1512
+BM_Complexity_O_N_log_N/2048       36050 ns      16666 ns        732
+BM_Complexity_O_N_log_N/4096       86222 ns      42534 ns        387
+BM_Complexity_O_N_log_N/8192      169248 ns      79549 ns        131
+BM_Complexity_O_N_log_N/16384     452666 ns     213528 ns         60
+BM_Complexity_O_N_log_N/32768     899947 ns     417768 ns         32
+BM_Complexity_O_N_log_N/65536    2418719 ns    1154466 ns          9
+BM_Complexity_O_N_log_N_BigO        2.21 NlgN       1.05 NlgN 
+BM_Complexity_O_N_log_N_RMS           15 %         16 % 
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  "context": {
+    "date": "2018-03-21 09:35:31",
+    "num_cpus": 1,
+    "mhz_per_cpu": 2904,
+    "cpu_scaling_enabled": false,
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_Complexity_O1/1",
+      "iterations": 9867,
+      "real_time": 3779,
+      "cpu_time": 1582,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/8",
+      "iterations": 9063,
+      "real_time": 3395,
+      "cpu_time": 1563,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/64",
+      "iterations": 8786,
+      "real_time": 3254,
+      "cpu_time": 1494,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/512",
+      "iterations": 9470,
+      "real_time": 2765,
+      "cpu_time": 1535,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/4096",
+      "iterations": 9652,
+      "real_time": 3176,
+      "cpu_time": 1566,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/32768",
+      "iterations": 9379,
+      "real_time": 3102,
+      "cpu_time": 1512,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/262144",
+      "iterations": 9324,
+      "real_time": 3098,
+      "cpu_time": 1542,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_BigO",
+      "cpu_coefficient": 1542,
+      "real_coefficient": 3224,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_RMS",
+      "rms": 0.02
+    },
+    {
+      "name": "BM_Complexity_O1/1",
+      "iterations": 9450,
+      "real_time": 2886,
+      "cpu_time": 1504,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/8",
+      "iterations": 9053,
+      "real_time": 2772,
+      "cpu_time": 1482,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/64",
+      "iterations": 9445,
+      "real_time": 3203,
+      "cpu_time": 1500,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/512",
+      "iterations": 9027,
+      "real_time": 4187,
+      "cpu_time": 1547,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/4096",
+      "iterations": 9690,
+      "real_time": 3950,
+      "cpu_time": 1552,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/32768",
+      "iterations": 9232,
+      "real_time": 3225,
+      "cpu_time": 1553,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/262144",
+      "iterations": 8669,
+      "real_time": 3549,
+      "cpu_time": 1588,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_BigO",
+      "cpu_coefficient": 1532,
+      "real_coefficient": 3396,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_RMS",
+      "rms": 0.02
+    },
+    {
+      "name": "BM_Complexity_O1/1",
+      "iterations": 8100,
+      "real_time": 2932,
+      "cpu_time": 1479,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/8",
+      "iterations": 9397,
+      "real_time": 3219,
+      "cpu_time": 1515,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/64",
+      "iterations": 9450,
+      "real_time": 3200,
+      "cpu_time": 1501,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/512",
+      "iterations": 9892,
+      "real_time": 3256,
+      "cpu_time": 1482,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/4096",
+      "iterations": 9258,
+      "real_time": 2541,
+      "cpu_time": 1449,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/32768",
+      "iterations": 9944,
+      "real_time": 3676,
+      "cpu_time": 1643,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1/262144",
+      "iterations": 7934,
+      "real_time": 3271,
+      "cpu_time": 1598,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_BigO",
+      "cpu_coefficient": 1524,
+      "real_coefficient": 3156,
+      "big_o": "f(N)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O1_RMS",
+      "rms": 0.04
+    },
+    {
+      "name": "BM_Complexity_O_N/1024",
+      "iterations": 66637,
+      "real_time": 425,
+      "cpu_time": 220,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/2048",
+      "iterations": 32639,
+      "real_time": 803,
+      "cpu_time": 435,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/4096",
+      "iterations": 15660,
+      "real_time": 1731,
+      "cpu_time": 832,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/8192",
+      "iterations": 8256,
+      "real_time": 4113,
+      "cpu_time": 1877,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/16384",
+      "iterations": 4602,
+      "real_time": 7809,
+      "cpu_time": 3633,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/32768",
+      "iterations": 2022,
+      "real_time": 14623,
+      "cpu_time": 7379,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/65536",
+      "iterations": 866,
+      "real_time": 23386,
+      "cpu_time": 13678,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_BigO",
+      "cpu_coefficient": 0,
+      "real_coefficient": 0,
+      "big_o": "N",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_RMS",
+      "rms": 0.05
+    },
+    {
+      "name": "BM_Complexity_O_N/1024",
+      "iterations": 60110,
+      "real_time": 477,
+      "cpu_time": 222,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/2048",
+      "iterations": 32983,
+      "real_time": 717,
+      "cpu_time": 423,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/4096",
+      "iterations": 14154,
+      "real_time": 2019,
+      "cpu_time": 914,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/8192",
+      "iterations": 9074,
+      "real_time": 4239,
+      "cpu_time": 1793,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/16384",
+      "iterations": 3773,
+      "real_time": 7736,
+      "cpu_time": 4006,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/32768",
+      "iterations": 1811,
+      "real_time": 12961,
+      "cpu_time": 6746,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/65536",
+      "iterations": 806,
+      "real_time": 35573,
+      "cpu_time": 14756,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_BigO",
+      "cpu_coefficient": 0,
+      "real_coefficient": 1,
+      "big_o": "f(N)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_RMS",
+      "rms": 0.06
+    },
+    {
+      "name": "BM_Complexity_O_N/1024",
+      "iterations": 56639,
+      "real_time": 429,
+      "cpu_time": 216,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/2048",
+      "iterations": 31589,
+      "real_time": 921,
+      "cpu_time": 424,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/4096",
+      "iterations": 12480,
+      "real_time": 1592,
+      "cpu_time": 882,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/8192",
+      "iterations": 8504,
+      "real_time": 3553,
+      "cpu_time": 1753,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/16384",
+      "iterations": 4573,
+      "real_time": 6321,
+      "cpu_time": 3434,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/32768",
+      "iterations": 2014,
+      "real_time": 15567,
+      "cpu_time": 7291,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N/65536",
+      "iterations": 869,
+      "real_time": 29284,
+      "cpu_time": 14636,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_BigO",
+      "cpu_coefficient": 0,
+      "real_coefficient": 0,
+      "big_o": "N",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_RMS",
+      "rms": 0.02
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/1024",
+      "iterations": 2095,
+      "real_time": 14771,
+      "cpu_time": 6956,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/2048",
+      "iterations": 861,
+      "real_time": 32868,
+      "cpu_time": 16702,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/4096",
+      "iterations": 337,
+      "real_time": 75960,
+      "cpu_time": 37727,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/8192",
+      "iterations": 122,
+      "real_time": 243052,
+      "cpu_time": 120329,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/16384",
+      "iterations": 54,
+      "real_time": 386539,
+      "cpu_time": 200271,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/32768",
+      "iterations": 32,
+      "real_time": 936463,
+      "cpu_time": 464483,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/65536",
+      "iterations": 12,
+      "real_time": 2539158,
+      "cpu_time": 1259054,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_BigO",
+      "cpu_coefficient": 1,
+      "real_coefficient": 2,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_RMS",
+      "rms": 0.17
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/1024",
+      "iterations": 2151,
+      "real_time": 11064,
+      "cpu_time": 6553,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/2048",
+      "iterations": 733,
+      "real_time": 33530,
+      "cpu_time": 17021,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/4096",
+      "iterations": 348,
+      "real_time": 72651,
+      "cpu_time": 37101,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/8192",
+      "iterations": 145,
+      "real_time": 170229,
+      "cpu_time": 87947,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/16384",
+      "iterations": 58,
+      "real_time": 374667,
+      "cpu_time": 189510,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/32768",
+      "iterations": 25,
+      "real_time": 1123787,
+      "cpu_time": 490484,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/65536",
+      "iterations": 12,
+      "real_time": 2133298,
+      "cpu_time": 1103760,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_BigO",
+      "cpu_coefficient": 1,
+      "real_coefficient": 2,
+      "big_o": "f(N)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_RMS",
+      "rms": 0.08
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/1024",
+      "iterations": 1512,
+      "real_time": 15639,
+      "cpu_time": 7366,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/2048",
+      "iterations": 732,
+      "real_time": 36050,
+      "cpu_time": 16666,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/4096",
+      "iterations": 387,
+      "real_time": 86222,
+      "cpu_time": 42534,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/8192",
+      "iterations": 131,
+      "real_time": 169248,
+      "cpu_time": 79549,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/16384",
+      "iterations": 60,
+      "real_time": 452666,
+      "cpu_time": 213528,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/32768",
+      "iterations": 32,
+      "real_time": 899947,
+      "cpu_time": 417768,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N/65536",
+      "iterations": 9,
+      "real_time": 2418719,
+      "cpu_time": 1154466,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_BigO",
+      "cpu_coefficient": 1,
+      "real_coefficient": 2,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Complexity_O_N_log_N_RMS",
+      "rms": 0.16
+    }
+  ]
+}
+
+---------------------------
+Testing CSVReporter Output
+---------------------------
+Run on (1 X 2904 MHz CPU )
+2018-03-21 09:35:31
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"BM_Complexity_O1/1",9867,3778.54,1582.13,ns,,,,,
+"BM_Complexity_O1/8",9063,3394.7,1562.96,ns,,,,,
+"BM_Complexity_O1/64",8786,3254.19,1493.99,ns,,,,,
+"BM_Complexity_O1/512",9470,2764.77,1535.46,ns,,,,,
+"BM_Complexity_O1/4096",9652,3176,1566.35,ns,,,,,
+"BM_Complexity_O1/32768",9379,3101.69,1511.79,ns,,,,,
+"BM_Complexity_O1/262144",9324,3098.45,1541.99,ns,,,,,
+"BM_Complexity_O1_BigO",,3224.05,1542.09,(1),,,,,
+"BM_Complexity_O1_RMS",,0.089396,0.0188319,,,,,,
+"BM_Complexity_O1/1",9450,2886.41,1503.87,ns,,,,,
+"BM_Complexity_O1/8",9053,2771.89,1481.99,ns,,,,,
+"BM_Complexity_O1/64",9445,3202.57,1499.54,ns,,,,,
+"BM_Complexity_O1/512",9027,4186.96,1546.83,ns,,,,,
+"BM_Complexity_O1/4096",9690,3950.38,1551.87,ns,,,,,
+"BM_Complexity_O1/32768",9232,3224.54,1553.44,ns,,,,,
+"BM_Complexity_O1/262144",8669,3548.78,1587.78,ns,,,,,
+"BM_Complexity_O1_BigO",,3395.93,1532.19,(1),,,,,
+"BM_Complexity_O1_RMS",,0.143929,0.022786,,,,,,
+"BM_Complexity_O1/1",8100,2931.95,1479.47,ns,,,,,
+"BM_Complexity_O1/8",9397,3219.09,1514.53,ns,,,,,
+"BM_Complexity_O1/64",9450,3199.84,1500.6,ns,,,,,
+"BM_Complexity_O1/512",9892,3256.49,1481.91,ns,,,,,
+"BM_Complexity_O1/4096",9258,2540.61,1448.78,ns,,,,,
+"BM_Complexity_O1/32768",9944,3675.54,1643.2,ns,,,,,
+"BM_Complexity_O1/262144",7934,3270.99,1598.43,ns,,,,,
+"BM_Complexity_O1_BigO",,3156.36,1523.85,f(N),,,,,
+"BM_Complexity_O1_RMS",,0.102175,0.0428153,,,,,,
+"BM_Complexity_O_N/1024",66637,425.443,219.569,ns,,,,,
+"BM_Complexity_O_N/2048",32639,802.941,434.854,ns,,,,,
+"BM_Complexity_O_N/4096",15660,1731.14,832.203,ns,,,,,
+"BM_Complexity_O_N/8192",8256,4113.43,1876.61,ns,,,,,
+"BM_Complexity_O_N/16384",4602,7808.68,3633.12,ns,,,,,
+"BM_Complexity_O_N/32768",2022,14622.8,7379.13,ns,,,,,
+"BM_Complexity_O_N/65536",866,23386.3,13678.4,ns,,,,,
+"BM_Complexity_O_N_BigO",,0.381157,0.212643,N,,,,,
+"BM_Complexity_O_N_RMS",,0.162449,0.0496579,,,,,,
+"BM_Complexity_O_N/1024",60110,477.16,222.034,ns,,,,,
+"BM_Complexity_O_N/2048",32983,717.245,423.419,ns,,,,,
+"BM_Complexity_O_N/4096",14154,2019.07,914.498,ns,,,,,
+"BM_Complexity_O_N/8192",9074,4238.66,1792.62,ns,,,,,
+"BM_Complexity_O_N/16384",3773,7735.79,4005.68,ns,,,,,
+"BM_Complexity_O_N/32768",1811,12960.6,6746.19,ns,,,,,
+"BM_Complexity_O_N/65536",806,35573.4,14756.4,ns,,,,,
+"BM_Complexity_O_N_BigO",,0.511279,0.222359,f(N),,,,,
+"BM_Complexity_O_N_RMS",,0.181868,0.0620973,,,,,,
+"BM_Complexity_O_N/1024",56639,429.08,216.005,ns,,,,,
+"BM_Complexity_O_N/2048",31589,921.139,423.803,ns,,,,,
+"BM_Complexity_O_N/4096",12480,1591.79,882.054,ns,,,,,
+"BM_Complexity_O_N/8192",8504,3552.56,1752.71,ns,,,,,
+"BM_Complexity_O_N/16384",4573,6320.76,3433.93,ns,,,,,
+"BM_Complexity_O_N/32768",2014,15567.1,7291.23,ns,,,,,
+"BM_Complexity_O_N/65536",869,29284.2,14635.7,ns,,,,,
+"BM_Complexity_O_N_BigO",,0.448944,0.222379,N,,,,,
+"BM_Complexity_O_N_RMS",,0.0632466,0.0215653,,,,,,
+"BM_Complexity_O_N_log_N/1024",2095,14770.6,6955.92,ns,,,,,
+"BM_Complexity_O_N_log_N/2048",861,32868.5,16701.7,ns,,,,,
+"BM_Complexity_O_N_log_N/4096",337,75959.8,37726.6,ns,,,,,
+"BM_Complexity_O_N_log_N/8192",122,243052,120329,ns,,,,,
+"BM_Complexity_O_N_log_N/16384",54,386539,200271,ns,,,,,
+"BM_Complexity_O_N_log_N/32768",32,936463,464483,ns,,,,,
+"BM_Complexity_O_N_log_N/65536",12,2.53916e+06,1.25905e+06,ns,,,,,
+"BM_Complexity_O_N_log_N_BigO",,2.30239,1.14309,NlgN,,,,,
+"BM_Complexity_O_N_log_N_RMS",,0.172006,0.165827,,,,,,
+"BM_Complexity_O_N_log_N/1024",2151,11064.3,6553.35,ns,,,,,
+"BM_Complexity_O_N_log_N/2048",733,33529.6,17021.1,ns,,,,,
+"BM_Complexity_O_N_log_N/4096",348,72650.5,37101.5,ns,,,,,
+"BM_Complexity_O_N_log_N/8192",145,170229,87947.4,ns,,,,,
+"BM_Complexity_O_N_log_N/16384",58,374667,189510,ns,,,,,
+"BM_Complexity_O_N_log_N/32768",25,1.12379e+06,490484,ns,,,,,
+"BM_Complexity_O_N_log_N/65536",12,2.1333e+06,1.10376e+06,ns,,,,,
+"BM_Complexity_O_N_log_N_BigO",,2.05797,1.0323,f(N),,,,,
+"BM_Complexity_O_N_log_N_RMS",,0.109193,0.0832805,,,,,,
+"BM_Complexity_O_N_log_N/1024",1512,15639.4,7366.48,ns,,,,,
+"BM_Complexity_O_N_log_N/2048",732,36050,16666.4,ns,,,,,
+"BM_Complexity_O_N_log_N/4096",387,86222,42533.6,ns,,,,,
+"BM_Complexity_O_N_log_N/8192",131,169248,79549,ns,,,,,
+"BM_Complexity_O_N_log_N/16384",60,452666,213528,ns,,,,,
+"BM_Complexity_O_N_log_N/32768",32,899947,417768,ns,,,,,
+"BM_Complexity_O_N_log_N/65536",9,2.41872e+06,1.15447e+06,ns,,,,,
+"BM_Complexity_O_N_log_N_BigO",,2.20556,1.04814,NlgN,,,,,
+"BM_Complexity_O_N_log_N_RMS",,0.149363,0.164639,,,,,,
+
+<end of output>
+Test time =   2.64 sec
+----------------------------------------------------------
+Test Passed.
+"complexity_benchmark" end time: Mar 21 09:35 PDT
+"complexity_benchmark" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Mar 21 09:35 PDT
